@@ -9,9 +9,12 @@ TODO
 ## 调整最小化动效
 
 - 添加：win+m: 最小化；alt+m: 显示最小化窗口
-- 可优化：点击即恢复窗口原来位置
+- 可优化TODO：点击即恢复窗口原来位置
 
-
+- 修改的文件：
+  - macos-style.conf：动效配置
+  - MacOSMinimize.sh
+  - MacOSRestore.sh
 
 ## 调整落霞文楷字体
 

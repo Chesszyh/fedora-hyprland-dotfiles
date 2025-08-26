@@ -6,6 +6,10 @@ This is my personal configuration for Fedora 42 running Hyprland.
 
 Refer to the [official installation guide](https://github.com/JaKooLit/Fedora-Hyprland)。This project is also my template.
 
+After install, you should restart and set SDDM(Simple Desktop Display Manager) as your default display manager.
+
+Maybe you should also run `sudo usermod -aG video $(whoami)`, in order to grant your user the necessary permissions for managing display settings.
+
 ## ✨ Main features
 
 - **Tiling Window Management**: Customize and switch between your workspaces!
@@ -110,27 +114,40 @@ Refer to the [official installation guide](https://github.com/JaKooLit/Fedora-Hy
 
 </details>
 
-## 🛠️ 如何定制
-
-为了保持配置的整洁和易于更新，请将你所有的个人修改集中在 `UserConfigs/` 目录中。
-
-- **修改快捷键**: 编辑 `configs/Keybinds.conf`。
-- **添加开机自启应用**: 编辑 `UserConfigs/Startup_Apps.conf`。`~/.config/autostart/`也可以配置自启动应用。
-- **修改窗口规则**: 编辑 `UserConfigs/WindowRules.conf`。
-- **修改动画效果**: 编辑 `UserConfigs/UserAnimations.conf`。
-- **修改其他 Hyprland 设置**: 编辑 `UserConfigs/UserSettings.conf`。
-- **设置环境变量**: 编辑 `UserConfigs/ENVariables.conf`。
-
 ## ⌨️ Shortcuts
 
-`$mainMod` 默认为 `SUPER` (Win) 键。
+`$mainMod` defaults to the `SUPER` (Win) key. You can activate the help menu with `$mainMod`+`H`.
 
-## 💡 依赖项
+Note that the help menu is not updated automatically. You need to manually update the documentation after modifying shortcuts.
 
-为了使所有功能正常工作，请确保安装了以下主要依赖项：
+## 🛠️ How to Customize
 
-- **核心**: `hyprland`, `hyprlock`, `hypridle`, `waybar`, `rofi`, `kitty`, `thunar`
-- **系统工具**: `brightnessctl`, `pamixer`, `playerctl`, `cliphist`, `polkit-kde`
-- **截图**: `grim`, `slurp`, `swappy`
-- **主题与外观**: `swww`, `wallust`, `nwg-look`, `wlogout`, `noto-fonts-emoji`
-- **其他**: `cava` (用于 Waybar 音频可视化)
+### Basic Configuration
+
+To keep the configuration clean and easy to update, place all your personal modifications in the UserConfigs directory.
+
+- **Modify Shortcuts**: Edit Keybinds.conf.
+- **Add Startup Applications**: Edit Startup_Apps.conf. You can also configure startup applications in `~/.config/autostart/`.
+- **Modify Window Rules**: Edit WindowRules.conf.
+- **Modify Animation Effects**: Add custom animations under the `Animations/` directory. The selected animation effects will be copied to UserAnimations.conf.
+- **Set Environment Variables**: Edit ENVariables.conf.
+
+### Areas to Explore
+
+1.  **Status Bar (Waybar):**
+    - **Configuration Files:** `~/.config/waybar/config` and `~/.config/waybar/style.css`.
+    - **Customization:** You can add or remove modules (e.g., existing weather, CPU usage, network speed), modify styles, etc. For example, you can try adding a module to Waybar that displays windows in the "Special Workspace," making the "minimized" experience more intuitive.
+
+2.  **Application Launcher (Rofi / AGS):**
+    - **Rofi:** The default launcher for this project. It is launched with `Super + D` by default. Configuration is located in `~/.config/rofi/`. You can modify themes, layouts, etc.
+    - **AGS (A Gs Shell):** A more powerful component that needs to be installed manually. AGS can create very fancy desktop widgets.
+
+## 💡 Dependencies
+
+To ensure all features work properly, make sure the following main dependencies are installed. Normally, the upstream template repository's auto-installation script should handle all dependencies:
+
+- **Core:** `hyprland`, `hyprlock`, `hypridle`, `waybar`, `rofi`, `kitty`, `thunar`
+- **System Tools:** `brightnessctl`, `pamixer`, `playerctl`, `cliphist`, `polkit-kde`
+- **Screenshot Tools:** `grim`, `slurp`, `swappy`
+- **Themes and Appearance:** `swww`, wallust, `nwg-look`, `wlogout`, `noto-fonts-emoji`
+- **Others:** `cava` (used for Waybar audio visualization)
