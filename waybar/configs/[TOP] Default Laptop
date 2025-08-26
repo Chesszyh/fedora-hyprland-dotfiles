@@ -28,6 +28,8 @@
 	"custom/playerctl",
 	"custom/separator#blank_2",
 	"hyprland/window",
+  "hyprland/workspaces", 
+  "custom/minimized"
 	],
 
 "modules-center": [

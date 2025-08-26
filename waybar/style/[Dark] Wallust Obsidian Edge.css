@@ -197,3 +197,23 @@ tooltip label {
 	min-height: 10px;
 	border-radius: 5px;
 }
+
+/* Windows minimize */
+#custom-minimized {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 2px 8px;
+    margin: 2px;
+    color: #ffffff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#custom-minimized:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+#custom-minimized.empty {
+    opacity: 0.5;
+}

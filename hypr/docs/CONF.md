@@ -1,59 +1,5 @@
 # Hyprland
 
-## animations
-此目录存放用于窗口动画的各种预设配置文件。`Animations.sh` 脚本会读取这些文件来改变系统的动画效果。
-
-### 00-default.conf
-默认的动画配置。
-
-### 01-default - v2.conf
-默认动画配置的第二个版本。
-
-### 03- Disable Animation.conf
-完全禁用窗口动画的配置，可用于提升性能（游戏模式）。
-
-### END-4.conf
-一个特定的动画预设。
-
-### HYDE - default.conf
-HYDE系列动画的默认配置。
-
-### HYDE - minimal-1.conf
-HYDE系列的简化动画配置。
-
-### HYDE - minimal-2.conf
-HYDE系列的另一种简化动画配置。
-
-### HYDE - optimized.conf
-HYDE系列的优化性能动画配置。
-
-### HYDE - Vertical.conf
-HYDE系列的垂直动画风格。
-
-### Mahaveer - me-1.conf
-Mahaveer 创建的个人动画风格。
-
-### Mahaveer - me-2.conf
-Mahaveer 创建的第二套个人动画风格。
-
-### ML4W - classic.conf
-ML4W 系列的经典动画风格。
-
-### ML4W - dynamic.conf
-ML4W 系列的动态动画风格。
-
-### ML4W - fast.conf
-ML4W 系列的快速动画风格。
-
-### ML4W - high.conf
-ML4W 系列的高强度动画风格。
-
-### ML4W - moving.conf
-ML4W 系列的移动动画风格。
-
-### ML4W - standard.conf
-ML4W 系列的标准动画风格。
-
 ## application-style.conf
 定义 GTK 应用程序的样式、主题、图标和字体，以确保在 Hyprland 环境下外观统一。主要使用 `gsettings` 命令来设置。
 
@@ -83,9 +29,6 @@ ML4W 系列的标准动画风格。
 
 ### default.conf
 默认的显示器布局配置。
-
-### README
-此目录的说明文件。
 
 ## monitors.conf
 定义显示器的配置文件。它会设置每个已连接显示器的分辨率、刷新率、位置以及分配给它的工作区。
@@ -311,9 +254,6 @@ ML4W 系列的标准动画风格。
 
 ### ZshChangeTheme.sh
 切换 Zsh 主题的脚本。
-
-## v2.3.16
-(未知文件)
 
 ## wallpaper_effects
 存放经过特效处理的壁纸的目录。

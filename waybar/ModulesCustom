@@ -5,6 +5,20 @@
 /* Custom Modules like weather browser, tty, file manager at the beginning */
 
 {
+    "custom/minimized": {
+        "format": "🗂️ {}",
+        "format-alt": "📱 {}",
+        "interval": 2,
+        "exec": "hyprctl clients -j | jq '[.[] | select(.workspace.name == \"special:minimized\")] | length' 2>/dev/null || echo '0'",
+        "on-click": "~/.config/hypr/scripts/MacOSRestore.sh",
+        "on-click-right": "hyprctl dispatch togglespecialworkspace minimized",
+        "tooltip": true,
+        "tooltip-format": "Minimized windows: {}\nLeft click: Restore all\nRight click: Toggle view",
+        "return-type": "json"
+    }
+}
+
+{
 "custom/weather": {
 	"format": "{}",
 	"format-alt": "{alt}: {}",
